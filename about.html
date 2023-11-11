@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Fanatic: Movie Selection Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><img src="img/site-logo.png" class="logo" alt="Main Site Logo"></a>
+        <div class="navbar-container">
+            <button class="btn sign-btn" alt="SIGN IN"
+                onclick="alert(`This is not a functional button. It is for educational purposes only.`);">SIGN
+                IN</button>
+            <a href="contact.html"><button class="btn contact-btn" alt="CONTACT US">CONTACT US</button></a>
+        </div>
+
+    </nav>
+
+    <!-- Movie Information -->
+    <section>
+        <div class="movie-info-container">
+            <div class="movie-detail">
+                <h1 class="movie-name"></h1>
+                <p class="movie-genres"></p>
+                <p class="movie-description"></p>
+                <p class="starring"><span>Starring: </span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Trailers -->
+    <section>
+        <h1 class="heading">Videos</h1>
+        <div class="trailer-container">
+            <!-- Embedding code taken from YouTube and moved to Javascript-->
+            <!-- <iframe src="" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        </div>
+    </section>
+
+    <!-- Movie Recommendations -->
+    <section>
+        <h1 class="heading">Recommendations</h1>
+        <div class="recommendations">
+            <div class="recommendations-container">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-container">
+        <footer class="footer-content">
+           
+        </footer>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/about.js"></script>
+
+</body>
+
+</html>

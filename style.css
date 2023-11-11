@@ -1,0 +1,40 @@
+
+h1{
+    text-align: center;
+    text-shadow: 2px 2px;
+}
+
+
+  
+
+body {
+   background-color: rgb(255, 77, 0);
+}
+
+.flex-container {
+ display: flex; 
+ border: solid 4px #000;
+ flex-wrap: wrap;
+ flex-direction: column;
+ width: 10%;
+ height: 10em;
+}
+
+p {
+     text-align: center;
+}
+
+li {
+      text-align: center;
+}
+
+
+
+   
+
+
+
+
+ 
+
+

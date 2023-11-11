@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie-Fanatic: Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html"><img src="img/site-logo.png" class="logo" alt="Main Site Logo"></a>
+        <div class="navbar-container">
+            <button class="btn sign-btn" alt="SIGN IN"
+                onclick="alert(`This is not a functional button. It is for educational purposes only.`);">SIGN
+                IN</button>
+            <a href="contact.html"><button class="btn contact-btn" alt="CONTACT US">CONTACT US</button></a>
+        </div>
+
+    </nav>
+
+    <!-- Contact form -->
+    <section class="contact-container">
+        <form id="contact-form">
+            <h3>Something on your mind? Drop us a line and we'll get back to you as soon as we can.</h3>
+            <input type="text" id="username" placeholder="Name" required />
+            <p id="username-error">Username must contain only numbers and letters and 6 to 20 characters</p>
+            <input type="email" id="email" placeholder="Email">
+            <p id="email-error">Please enter a valid email address, e.g. me@mydomain.com</p>
+            <input type="phone" id="phone" placeholder="Phone">
+            <p id="phone-error">Please enter a 10 digit phone number with dashes, e.g. 555-555-5555</p>
+            <input type="zip" id="zip" placeholder="Zip Code">
+            <p id="zip-error">Please enter a 5 digit zip code</p>
+            <textarea id="message" placeholder="Tell us what's up!"></textarea>
+            <input type="submit" class="button" value="SEND" onclick="showMessage()" />
+        </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-container">
+        <footer class="footer-content">
+            <p>&copy; Brian Kelly demo website for Code Louisville Web/Dev2, 2023</p>
+        </footer>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>
