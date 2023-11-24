@@ -11,14 +11,7 @@ body {
    background-color: rgb(255, 77, 0);
 }
 
-.flex-container {
- display: flex; 
- border: solid 4px #000;
- flex-wrap: wrap;
- flex-direction: column;
- width: 10%;
- height: 10em;
-}
+
 
 p {
      text-align: center;
@@ -27,6 +20,13 @@ p {
 li {
       text-align: center;
 }
+
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 
 
 
