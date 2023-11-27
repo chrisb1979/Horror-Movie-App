@@ -3,13 +3,12 @@ const items = [
     { title: 'Scream',     year: 1996 },
     { title: 'Friday the 13th',  year: 1980},
     { title: 'Childs Play', year: 1988},
-    { title: 'Wrong turn', year: 2003},
+    { title: 'Wrong turn', year: 2003}
 ]
 
 const filteredMovies = movies.filter((movies)  => {
-     return movies.title  <= Halloween
+     return movies.title  === Halloween
 })
 
         
-console.log(highestRated.movieTitle);
-        
+console.log(movies)
