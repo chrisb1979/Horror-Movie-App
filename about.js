@@ -1,6 +1,6 @@
 let movie_id = location.pathname;
 
-// Fetch movie details from TMDB.org API
+
 fetch(`${movieDetails}${movie_id}?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -31,12 +31,12 @@ const movieHeroInfo = (data) => {
     backdrop.style.backgroundImage = `url(${hiresImageURL}${data.backdrop_path})`;
 }
 
-// Adds a comma after a genre if there are more to be listed, adds nothing if it's finished
+
 const formatString = (currentIndex, maxIndex) => {
     return (currentIndex == maxIndex - 1) ? '' : ', ';
 }
 
-// Fetch movie cast info from TMDB.org API
+
 fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -48,7 +48,7 @@ fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
         }
     })
 
-// Fetch movie trailers from TMDB.org API
+
 fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -56,7 +56,7 @@ fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
     .then(data => {
         let trailerContainer = document.querySelector('.trailer-container');
         let maxClips = (data.results.length > 3) ? 3 : data.results.length;
-        // Use code from youtube to imbed the videos
+        
         for (let i = 0; i < maxClips; i++) {
             trailerContainer.innerHTML += `
         <iframe src="https://youtube.com/embed/${data.results[i].key}"
@@ -67,7 +67,7 @@ fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
         }
     })
 
-// Fetch movie recommendations from TMDB.org API
+
 fetch(`${movieDetails}${movie_id}/recommendations?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))

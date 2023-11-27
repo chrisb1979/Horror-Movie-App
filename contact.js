@@ -1,4 +1,4 @@
-// Regular expressions for contact form
+
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
@@ -9,7 +9,7 @@ const emailError = document.getElementById('email-error')
 const phoneError = document.getElementById('phone-error')
 const zipError = document.getElementById('zip-error')
 
-// Username expression
+
 username.addEventListener('input', function (e) {
     let pattern = /^[\w]{6,20}$/;
     let currentValue = e.target.value;
@@ -22,7 +22,7 @@ username.addEventListener('input', function (e) {
     }
 })
 
-// Email expression
+
 email.addEventListener('input', function (e) {
     let pattern = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{3,8})(\.[a-z]{2,8})?$/
     let currentValue = e.target.value;
@@ -35,7 +35,7 @@ email.addEventListener('input', function (e) {
     }
 })
 
-// Phone number expression
+
 phone.addEventListener('input', function (e) {
     let pattern = /^\d{3}-\d{3}-\d{4}?$/
     let currentValue = e.target.value;
@@ -48,7 +48,7 @@ phone.addEventListener('input', function (e) {
     }
 })
 
-// Zip code expression
+
 zip.addEventListener('input', function (e) {
     let pattern = /^\d{5}?$/;
     let currentValue = e.target.value;
@@ -61,7 +61,7 @@ zip.addEventListener('input', function (e) {
     }
 })
 
-// Send button message
+
 function showMessage() {
     alert();
 }

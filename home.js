@@ -1,6 +1,6 @@
 const main = document.querySelector('.main');
 
-// Fetch movie data from the API and convert to JSON
+
 fetch(genreListURL + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -11,7 +11,7 @@ fetch(genreListURL + new URLSearchParams({
         })
     });
 
-// Fetch movies from TMDB by Genre and ID
+
 const moviesList = (id, genres) => {
     fetch(movieGenreURL + new URLSearchParams({
         api_key: apiKeyTMDB,
@@ -24,7 +24,7 @@ const moviesList = (id, genres) => {
         .catch(err => console.log(err));
 }
 
-// Bring in 'main' from the HTML and add movies and button images
+
 const makeCategoryElement = (category, data) => {
     main.innerHTML += `
 <div class="movie-list">
@@ -38,8 +38,7 @@ const makeCategoryElement = (category, data) => {
     movieCards(category, data);
 }
 
-/* Check to make sure the image is received from TMDB. Per their documentation, tt uses both 'backdrop_path' and 'poster_path'
-for some stupid reason. Check for both and skip if neither is found */
+
 const movieCards = (id, data) => {
     const movieContainer = document.getElementById(id);
     data.forEach((item, slider) => {
@@ -50,8 +49,7 @@ const movieCards = (id, data) => {
             }
         }
 
-        /* Pull in the images from TMDB and show movie names beneath the container
-           On click, take the user to the about page */
+        
         movieContainer.innerHTML += `
         <div class="movie" onclick="location.href = '/${item.id}'">
             <img src="${imageURL}${item.backdrop_path}" alt="Movie Poster">
@@ -59,13 +57,13 @@ const movieCards = (id, data) => {
         </div>
         `;
 
-        // Target the 'movie-container' holding all the movie images and add scrolling and buttons
+        
         const scrollBar = () => {
             const container = [...document.querySelectorAll('.movie-container')];
             const nextBtn = [...document.querySelectorAll('.next-btn')];
             const previousBtn = [...document.querySelectorAll('.previous-btn')];
 
-            // Use getBoundingClientRect to return the containers dimensions for manipulation
+           
             container.forEach((item, i) => {
                 let containerDimensions = item.getBoundingClientRect();
                 let containerWidth = containerDimensions.width;
@@ -79,7 +77,7 @@ const movieCards = (id, data) => {
                 })
             })
         }
-        // Movie card slider, will stop the scrolling function once the end of the array is reached
+      
         if (slider == data.length - 1) {
             setTimeout(() => {
                 scrollBar();

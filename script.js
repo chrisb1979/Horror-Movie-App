@@ -6,7 +6,7 @@ const items = [
     { title: 'Wrong turn', year: 2003}
 ]
 
-const filteredMovies = movies.filter((movies)  => {
+const filteredMovies = items.filter((movies)  => {
      return movies.title  === Halloween
 })
 
