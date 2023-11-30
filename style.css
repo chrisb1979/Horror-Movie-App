@@ -28,6 +28,10 @@ body {
     padding: 20px;
   }
 
+    .navbar-container {
+        display: flex justify-content space-evenly;
+    }
+
 
 
    
